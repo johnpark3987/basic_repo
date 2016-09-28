@@ -48,3 +48,132 @@ Johns-MacBook-Pro:basic_repo johnpark$ git commit -m "final commit"
 [master a11d00d] final commit
  2 files changed, 11 insertions(+), 1 deletion(-)
 Johns-MacBook-Pro:basic_repo johnpark$ 
+
+Last login: Wed Sep 28 11:51:49 on ttys001
+Johns-MacBook-Pro:~ johnpark$ git push --all origin master
+fatal: Not a git repository (or any of the parent directories): .git
+Johns-MacBook-Pro:~ johnpark$ cd desktop
+Johns-MacBook-Pro:desktop johnpark$ cd basic_repo
+Johns-MacBook-Pro:basic_repo johnpark$ git push --all origin master
+error: --all can't be combined with refspecs
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    --delete              delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check|on-demand|no>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=<yes|no|if-asked>]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+
+Johns-MacBook-Pro:basic_repo johnpark$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+Johns-MacBook-Pro:basic_repo johnpark$ git push origin
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+Johns-MacBook-Pro:basic_repo johnpark$ git push --set-upstream origin master
+To https://github.com/johnpark3987/basic_repo.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/johnpark3987/basic_repo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Johns-MacBook-Pro:basic_repo johnpark$ git pull origin master
+From https://github.com/johnpark3987/basic_repo
+ * branch            master     -> FETCH_HEAD
+error: There was a problem with the editor 'vi'.
+Not committing merge; use 'git commit' to complete the merge.
+Johns-MacBook-Pro:basic_repo johnpark$ git pull origin master
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+Johns-MacBook-Pro:basic_repo johnpark$ git add .
+Johns-MacBook-Pro:basic_repo johnpark$ git commit -m " "
+Aborting commit due to empty commit message.
+Johns-MacBook-Pro:basic_repo johnpark$ git commit -m "git push"
+[master fcd3c9f] git push
+Johns-MacBook-Pro:basic_repo johnpark$ git pull origin master
+From https://github.com/johnpark3987/basic_repo
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+Johns-MacBook-Pro:basic_repo johnpark$ git push origin master
+Counting objects: 14, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 2.09 KiB | 0 bytes/s, done.
+Total 14 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/johnpark3987/basic_repo.git
+   ed9755b..fcd3c9f  master -> master
+Johns-MacBook-Pro:basic_repo johnpark$ 
+
