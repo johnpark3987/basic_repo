@@ -1,0 +1,50 @@
+Johns-MacBook-Pro:~ johnpark$ cd desktop
+Johns-MacBook-Pro:desktop johnpark$ mkdir basic_repo
+Johns-MacBook-Pro:desktop johnpark$ cd basic_repo
+Johns-MacBook-Pro:basic_repo johnpark$ git init
+Initialized empty Git repository in /Users/johnpark/Desktop/basic_repo/.git/
+Johns-MacBook-Pro:basic_repo johnpark$ touch assgn4.basic_repo.html
+Johns-MacBook-Pro:basic_repo johnpark$ touch assgn4.basic_repo.css
+Johns-MacBook-Pro:basic_repo johnpark$ git add .
+Johns-MacBook-Pro:basic_repo johnpark$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   assgn4.basic_repo.css
+	new file:   assgn4.basic_repo.html
+
+Johns-MacBook-Pro:basic_repo johnpark$ git commit -m "first commit"
+[master (root-commit) 865e285] first commit
+ 2 files changed, 17 insertions(+)
+ create mode 100644 assgn4.basic_repo.css
+ create mode 100644 assgn4.basic_repo.html
+
+Johns-MacBook-Pro:basic_repo johnpark$ git remote add origin https://github.com/johnpark3987/basic_repo.git
+
+Johns-MacBook-Pro:basic_repo johnpark$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   assgn4.basic_repo.css
+	modified:   assgn4.basic_repo.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Johns-MacBook-Pro:basic_repo johnpark$ git add .
+gJohns-MacBook-Pro:basic_repo johnpark$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   assgn4.basic_repo.css
+	modified:   assgn4.basic_repo.html
+
+Johns-MacBook-Pro:basic_repo johnpark$ git commit -m "final commit"
+[master a11d00d] final commit
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+Johns-MacBook-Pro:basic_repo johnpark$ 
